@@ -1,30 +1,52 @@
-# Flask App – Docker Learning Project
+# Flask App – Docker & AWS ECS Learning Project
 
-A simple Flask web application used to learn Docker containerization and image creation.
+A simple Flask web application used as a hands-on project to learn Docker containerization and deploying containerized applications on AWS ECS.
 
 ## About
 
 This project is part of my DevOps learning journey.
 
-The Flask application source code is based on the **TrainWithShubham** tutorial. My primary focus in this project was learning Docker concepts rather than developing the Flask application from scratch.
+The Flask application source code is based on the **TrainWithShubham** tutorial. My primary focus in this project was learning Docker and AWS container deployment rather than developing the Flask application from scratch.
 
 ## My Contributions
 
-* Created a Dockerfile
-* Created a multi-stage Dockerfile (`Dockerfile-multi`)
-* Built Docker images locally
-* Tested the application inside Docker containers
-* Learned Docker image optimization using multi-stage builds
+### Docker
+
+- Created a Dockerfile
+- Created a multi-stage Dockerfile (`Dockerfile-multi`)
+- Built Docker images locally
+- Ran and tested the Flask application inside Docker containers
+- Learned Docker image optimization using multi-stage builds
+- Tagged Docker images for Amazon ECR
+
+### AWS
+
+- Created an Amazon ECR repository
+- Pushed the Docker image to Amazon ECR
+- Created an Amazon ECS cluster
+- Created an ECS task definition
+- Configured an ECS Fargate task
+- Created and configured an ECS task execution IAM role
+- Configured container port mapping
+- Configured Security Groups for HTTP traffic
+- Enabled public networking for the Fargate task
+- Configured CloudWatch Logs
+- Deployed and tested the Flask application on AWS ECS Fargate
 
 ## Tech Stack
 
-* Python 3
-* Flask
-* Docker
+- Python 3
+- Flask
+- Docker
+- Amazon ECR
+- Amazon ECS
+- AWS Fargate
+- Amazon CloudWatch
+- AWS IAM
 
 ## Project Structure
 
-```
+```text
 .
 ├── app.py
 ├── run.py
@@ -33,49 +55,3 @@ The Flask application source code is based on the **TrainWithShubham** tutorial.
 ├── requirements.txt
 └── templates/
     └── index.html
-```
-
-## Run the Application
-
-Build the Docker image:
-
-```bash
-docker build -t flask-app .
-```
-
-Run the container:
-
-```bash
-docker run -d -p 80:80 flask-app
-```
-
-Open in your browser:
-
-```
-http://localhost
-```
-
-Health Check:
-
-```
-http://localhost/health
-```
-
-## Learning Objectives
-
-* Understand Docker fundamentals
-* Write Dockerfiles
-* Create multi-stage Docker builds
-* Build and run Docker images
-* Test containerized Flask applications
-
-## Future Improvements
-
-* Push Docker images to Amazon ECR
-* Deploy the application on AWS ECS
-* Add CI/CD using Jenkins or GitHub Actions
-* Automate infrastructure using Terraform
-
-## Acknowledgement
-
-The Flask application source code is based on the **TrainWithShubham** DevOps tutorial. This repository is maintained for educational purposes, with my contributions focused on Docker containerization and related learning.
