@@ -1,0 +1,9 @@
+version: 2.8
+
+services:
+  flask-app:
+    build: 
+      context: "."
+    ports:
+      - "80:80"
+      
