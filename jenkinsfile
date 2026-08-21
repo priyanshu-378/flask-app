@@ -37,6 +37,7 @@ pipeline{
                     sh "docker tag flask-app-flask-app:latest 378priyanshu/flask-app:latest"
                     sh "docker push 378priyanshu/flask-app:latest"
                 }
+                echo "project deployation complete and fully automated
                 
             }
         }
