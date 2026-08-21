@@ -5,4 +5,4 @@ services:
     image: "378priyanshu/flask-app:latest"
     ports:
       - "80:80"
-      
+    
